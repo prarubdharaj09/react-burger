@@ -81,10 +81,7 @@ module.exports = function (webpackEnv) {
       },
       {
         loader: require.resolve('css-loader'),
-        options: cssOptions,
-        importLoaders: 1,
-        modules: true,
-        localIdentName: '[name]__[local]__[hash:base64:5]'
+        options: cssOptions
       },
       {
         // Options for PostCSS as we reference these options twice
@@ -452,6 +449,7 @@ module: {
               modules: {
                 getLocalIdent: getCSSModuleLocalIdent,
               },
+              localIdentName: '[name]__[local]__[hash:base64:5]'
             }),
           },
           // Opt-in support for SASS (using .scss or .sass extensions).

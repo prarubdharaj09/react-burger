@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from './components/Layout/layout';
+import BurgerBuilder from  './containers/BurgerBuilder/BurgerBuilder.js';
 
 function App() {
   return (
     <div>
-    
+     <Layout>
+      <BurgerBuilder></BurgerBuilder>
+     </Layout>
     </div>
   );
 }
